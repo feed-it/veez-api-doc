@@ -1,5 +1,3 @@
-<img src="../../../assets/images/feeditLogo.png" width="100"> <img src="../../../assets/images/nodejsLogo.svg" width="100" align="right">
-
 # Produits
 
 > Ce microservice a pour objectif d'importer des ventes dans la base de données du client.

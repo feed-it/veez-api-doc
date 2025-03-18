@@ -1,5 +1,3 @@
-<img src="../../../assets/images/feeditLogo.png" width="100"> <img src="../../../assets/images/nodejsLogo.svg" width="100" align="right">
-
 # Portefeuilles
 
 > Ce microservice a pour objectif de gerer les portefeuilles.
@@ -96,7 +94,7 @@ Content-Type: application/json
 ### 💡 Exemple avec `curl`
 
 ```sh
-curl -X POST "https://api-9a4b7c2d6e1f8g3h0i5j2k7l4m9n6o1p2q.veez.myfeedit.com/portfolios/insert/2025" \
+curl -X POST "https://api-9a4b7c2d6e1f8g3h0i5j2k7l4m9n6o1p2q.veez.myfeedit.com/portfolios/insert/2025?mode=flush-tc" \
      -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..." \
      -H "Content-Type: application/json" \
      -d '[
