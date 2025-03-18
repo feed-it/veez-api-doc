@@ -80,10 +80,10 @@ curl -X POST "https://auth.myfeedit.com/realms/veez/protocol/openid-connect/toke
 
 Une fois le **access_token** obtenu, toutes les requêtes à l'API doivent inclure cet access token dans l'en-tête **Authorization** en mode Bearer Token.
 
-### 📌 URL de l'API d'import de ventes
+### 📌 URL de l'API d'import des portefeuilles
 
 ```sh
-POST https://api-9a4b7c2d6e1f8g3h0i5j2k7l4m9n6o1p2q.veez.myfeedit.com/products
+POST https://api-9a4b7c2d6e1f8g3h0i5j2k7l4m9n6o1p2q.veez.myfeedit.com/portfolios/insert/:year
 ```
 
 ### 🏷️ En-têtes requis
@@ -96,16 +96,13 @@ Content-Type: application/json
 ### 💡 Exemple avec `curl`
 
 ```sh
-curl -X POST "https://api-9a4b7c2d6e1f8g3h0i5j2k7l4m9n6o1p2q.veez.myfeedit.com/products" \
+curl -X POST "https://api-9a4b7c2d6e1f8g3h0i5j2k7l4m9n6o1p2q.veez.myfeedit.com/portfolios/insert/2025" \
      -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..." \
      -H "Content-Type: application/json" \
      -d '[
             {
-                "id": "123456789",
-                "name": "00/00/15+40cao",
-                "family": "ENGRAIS SOLIDES",
-                "sub-family": "BULKS ACHETES A LA CARTE",
-                "unit": "Litre"
+              "tc": "Yvan Dugrain",
+              "siret": "123456789"
             }
         ]
 ```
@@ -146,165 +143,6 @@ curl -X POST "https://api-9a4b7c2d6e1f8g3h0i5j2k7l4m9n6o1p2q.veez.myfeedit.com/p
 
 ---
 
-<details>
-     <summary> <b>POST</b> => <em><u>https://api-9a4b7c2d6e1f8g3h0i5j2k7l4m9n6o1p2q.veez.myfeedit.com/portfolios/save/:year</u></em></summary>
-
-- Params :
-
-  - `year` ex : `https://api-9a4b..../portfolios/insert/2025`
-
-- Query :
-  - `?tc=Yvan Dugrain`.
-
-> 💡 Save a portfolio's simulation for a given tc name.
-
-</details>
-
----
-
-<!--
-## Simulations
-
-<details>
-     <summary> <b>GET</b> => <em><u>https://api-9a4b7c2d6e1f8g3h0i5j2k7l4m9n6o1p2q.veez.myfeedit.com/portfolios/my-simulations/:year</u></em></summary>
-
-- Params :
-  - `year` ex : `https://api-9a4b..../my-simulations/2025`
-
-> 💡 Retrieve all simulations.
-
-</details>
-
----
-
-<details>
-     <summary> <b>POST</b> => <em><u>https://api-9a4b7c2d6e1f8g3h0i5j2k7l4m9n6o1p2q.veez.myfeedit.com/portfolios/my-simulations/:year</u></em></summary>
-
-- Params :
-
-  - `year` ex : `https://api-9a4b..../my-simulations/2025`
-
-> 💡 Insert a Simulation.
-
-</details>
-
----
-
-<details>
-     <summary> <b>PUT</b> => <em><u>https://api-9a4b7c2d6e1f8g3h0i5j2k7l4m9n6o1p2q.veez.myfeedit.com/portfolios/my-simulations/:year/:simulationId</u></em></summary>
-
-- Params :
-
-  - `year` ex : `https://api-9a4b..../my-simulations/2025`
-  - `simulationId` ex : `https://api-9a4b..../my-simulations/543548663214`
-
-> 💡 Update a simulation.
-
-</details>
-
----
-
-<details>
-     <summary> <b>DELETE</b> => <em><u>https://api-9a4b7c2d6e1f8g3h0i5j2k7l4m9n6o1p2q.veez.myfeedit.com/portfolios/my-simulations/:year/:simulationId</u></em></summary>
-
-- Params :
-
-  - `year` ex : `https://api-9a4b..../my-simulations/2025`
-  - `simulationId` ex : `https://api-9a4b..../my-simulations/543548663214`
-
-> 💡 Delete a simulation.
-
-</details>
-
----
-
-<details>
-     <summary> <b>DELETE</b> => <em><u>https://api-9a4b7c2d6e1f8g3h0i5j2k7l4m9n6o1p2q.veez.myfeedit.com/portfolios/my-simulations-contents/:year/:simulationId</u></em></summary>
-
-- Params :
-
-  - `year` ex : `https://api-9a4b..../my-simulations/2025`
-  - `simulationId` ex : `https://api-9a4b..../my-simulations/543548663214`
-
-> 💡 Delete content of a simulation.
-
-</details>
-
----
-
-##### (share)
-
-<details>
-     <summary> <b>GET</b> => <em><u>https://api-9a4b7c2d6e1f8g3h0i5j2k7l4m9n6o1p2q.veez.myfeedit.com/portfolios/simulations-shared-with-me/:year</u></em></summary>
-
-- Params :
-
-  - `year` ex : `https://api-9a4b..../my-simulations/2025`
-
-> 💡 Get a simulation that has been shared with me.
-
-</details>
-
----
-
-<details>
-     <summary> <b>PUT</b> => <em><u>https://api-9a4b7c2d6e1f8g3h0i5j2k7l4m9n6o1p2q.veez.myfeedit.com/portfolios/share-simulation-with-my-team/:year/:id</u></em></summary>
-
-- Params :
-
-  - `year` ex : `https://api-9a4b..../my-simulations/2025`
-  - `id` (simulationId) ex : `https://api-9a4b..../my-simulations/2025/654654`
-
-> 💡 Share a simulation with my team.
-
-</details>
-
----
-
-<details>
-     <summary> <b>PUT</b> => <em><u>https://api-9a4b7c2d6e1f8g3h0i5j2k7l4m9n6o1p2q.veez.myfeedit.com/portfolios/share-simulation-with-my-manager/:year/:id</u></em></summary>
-
-- Params :
-
-  - `year` ex : `https://api-9a4b..../my-simulations/2025`
-  - `id` (simulationId) ex : `https://api-9a4b..../my-simulations/2025/654654`
-
-> 💡 Share a simulation with my manager.
-
-</details>
-
----
-
-##### (unshare)
-
-<details>
-     <summary> <b>PUT</b> => <em><u>https://api-9a4b7c2d6e1f8g3h0i5j2k7l4m9n6o1p2q.veez.myfeedit.com/portfolios/unshare-simulation-with-my-team/:year/:id</u></em></summary>
-
-- Params :
-
-  - `year` ex : `https://api-9a4b..../my-simulations/2025`
-  - `id` (simulationId) ex : `https://api-9a4b..../my-simulations/2025/654654`
-
-> 💡 Unshare a simulation with my team.
-
-</details>
-
----
-
-<details>
-     <summary> <b>PUT</b> => <em><u>https://api-9a4b7c2d6e1f8g3h0i5j2k7l4m9n6o1p2q.veez.myfeedit.com/portfolios/unshare-simulation-with-my-manager/:year/:id</u></em></summary>
-
-- Params :
-
-  - `year` ex : `https://api-9a4b..../my-simulations/2025`
-  - `id` (simulationId) ex : `https://api-9a4b..../my-simulations/2025/654654`
-
-> 💡 Unshare a simulation with my manager.
-
-</details> -->
-
----
-
 ### Headers
 
 ```http
@@ -313,8 +151,6 @@ Content-Type: application/json
 ```
 
 # <a id="body"></a> Body 📖
-
-> 💡 Chaque produit contient la prop rateMb qui sera le taux de marge, "activity" permettra de définir ce qu'apporte ou contient le produit.
 
 Le body passé à la requête doit avoir le format qui suit :
 
@@ -338,16 +174,16 @@ Le body passé à la requête doit avoir le format qui suit :
   2. **Obtention d'un Token JWT** via Keycloak.
 - **Utilisation obligatoire du Bearer Token** pour toutes les requêtes après authentification.
 
-#### 📤 Processus d'import des ventes
+#### 📤 Processus d'import des portefeuilles
 
 1. **Appel de l'API d'authentification** pour récupérer un **token JWT**.
 2. **Envoi d'une requête HTTP POST** à l'endpoint dédié en incluant :
-   - Un JSON contenant les détails des produits.
+   - Un JSON contenant les portefeuilles.
 3. **Réponse de l'API** indiquant le succès ou l'échec de l'import.
 
 #### 📌 Format attendu des données
 
-Chaque objet JSON représentant une vente doit contenir les informations suivantes :
+Chaque objet JSON représentant un portefeuille doit contenir les informations suivantes :
 
 - `tc` : Nom du Tc.
 - `siret` : siret à lui attribuer.

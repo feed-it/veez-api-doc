@@ -83,7 +83,7 @@ Une fois le **access_token** obtenu, toutes les requêtes à l'API doivent inclu
 ### 📌 URL de l'API d'import de ventes
 
 ```sh
-POST https://api-9a4b7c2d6e1f8g3h0i5j2k7l4m9n6o1p2q.veez.myfeedit.com/products
+POST https://api-9a4b7c2d6e1f8g3h0i5j2k7l4m9n6o1p2q.veez.myfeedit.com/sales/:year
 ```
 
 ### 🏷️ En-têtes requis
@@ -96,7 +96,7 @@ Content-Type: application/json
 ### 💡 Exemple avec `curl`
 
 ```sh
-curl -X POST "https://api-9a4b7c2d6e1f8g3h0i5j2k7l4m9n6o1p2q.veez.myfeedit.com/products" \
+curl -X POST "https://api-9a4b7c2d6e1f8g3h0i5j2k7l4m9n6o1p2q.veez.myfeedit.com/sales/2025" \
      -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..." \
      -H "Content-Type: application/json" \
      -d '[
@@ -162,7 +162,7 @@ Le body passé à la requête doit avoir le format qui suit :
 
 1. **Appel de l'API d'authentification** pour récupérer un **token JWT**.
 2. **Envoi d'une requête HTTP POST** à l'endpoint dédié en incluant :
-   - Un JSON contenant les détails des produits.
+   - Un JSON contenant les détails des ventes.
 3. **Réponse de l'API** indiquant le succès ou l'échec de l'import.
 
 #### 📌 Format attendu des données

@@ -80,7 +80,7 @@ curl -X POST "https://auth.myfeedit.com/realms/veez/protocol/openid-connect/toke
 
 Une fois le **access_token** obtenu, toutes les requêtes à l'API doivent inclure cet access token dans l'en-tête **Authorization** en mode Bearer Token.
 
-### 📌 URL de l'API d'import de ventes
+### 📌 URL de l'API d'import des produits
 
 ```sh
 POST https://api-9a4b7c2d6e1f8g3h0i5j2k7l4m9n6o1p2q.veez.myfeedit.com/products
