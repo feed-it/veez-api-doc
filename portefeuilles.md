@@ -70,7 +70,7 @@ Le body passé à la requête doit avoir le format qui suit :
 [
   {
     "tc": "Yvan Dugrain",
-    "siret": "123456789"
+    "codeAdh": "123456789"
   }
 ]
 ```
@@ -98,7 +98,7 @@ Le body passé à la requête doit avoir le format qui suit :
 Chaque objet JSON représentant un portefeuille doit contenir les informations suivantes :
 
 - `tc` : Nom du Tc.
-- `siret` : siret à lui attribuer.
+- `codeAdh` : code interne de l'exploitation affectée.
 
 #### ✅ Exemple de réponse après insertion réussie
 
@@ -118,7 +118,7 @@ Chaque objet JSON représentant un portefeuille doit contenir les informations s
     Chaque objet doit contenir :
     
 - `tc` : Nom du Tc.
-- `siret` : siret à lui attribuer.
+- `codeAdh` : code interne de l'exploitation affectée.
 </details>
 
 ---
