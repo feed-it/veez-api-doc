@@ -9,6 +9,8 @@
 3. [✅ Résumé](#resume)
 4. [⁉️ FAQ](#faq)
 
+---
+
 # Authentification 🪪
 
 Ce microservice utilise l’authentification **Bearer Token** pour sécuriser les appels API.
