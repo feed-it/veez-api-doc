@@ -4,19 +4,18 @@
 
 # Table des matières
 
-1. [🔄 Processus d'authentification](#processus-authentification)
-2. [1️⃣ Demande de Token](#demande-token)
-3. [2️⃣ Utilisation du Token pour les appels API](#utilisation-token)
-4. [🛣️ Appel de la route](#appel-route)
-5. [📖 Body](#body)
-6. [✅ Résumé](#resume)
-7. [⁉️ FAQ](#faq)
+1. [🛣️ Appel de la route](#appel-route)
+2. [📖 Body](#body)
+3. [✅ Résumé](#resume)
+4. [⁉️ FAQ](#faq)
 
 # Authentification 🪪
 
 Ce microservice utilise l’authentification **Bearer Token** pour sécuriser les appels API.
 
 [La documentation Authentification se trouve ici](authentification.md)
+
+---
 
 # <a id="appel-route"></a> Appel de la route 🛣️
 
@@ -32,6 +31,8 @@ Pour importer des ventes, effectuez un appel **HTTP POST** vers l’endpoint dé
 Authorization: Basic <yourTokenHere>
 Content-Type: application/json
 ```
+
+---
 
 # <a id="body"></a> Body 📖
 
@@ -53,6 +54,8 @@ Le body passé à la requête doit avoir le format qui suit :
   }
 ]
 ```
+
+---
 
 # ✅ <a id="resume"></a> Résumé
 
@@ -94,6 +97,8 @@ Chaque objet JSON représentant une vente doit contenir les informations suivant
   "businessEntity": "FEEDIT"
 }
 ```
+
+---
 
 # <a id="faq"></a> FAQ ⁉️
 
