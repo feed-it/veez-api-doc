@@ -13,7 +13,7 @@
 
 Ce microservice utilise l’authentification **Bearer Token** pour sécuriser les appels API.
 
-## [La documentation Authentification se trouve ici](authentification.md)
+[La documentation Authentification se trouve ici](authentification.md)
 
 ---
 
