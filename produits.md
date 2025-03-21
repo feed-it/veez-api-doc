@@ -47,15 +47,15 @@ Le body passé à la requête doit avoir le format qui suit :
 ```json
 [
   {
-    "id": "456323789",
-    "name": "00/00/15+40cao",
+    "productRef": "456323789",
+    "productName": "00/00/15+40cao",
     "family": "SEMENCES ET PLANTS",
     "subFamily": "SEMENCES BLES PRINTEMPS",
     "unit": "Litres"
   },
   {
-    "id": "987453",
-    "name": "00/00/20+6MGO+27CAO",
+    "productRef": "987453",
+    "productName": "00/00/20+6MGO+27CAO",
     "family": "ENGRAIS SOLIDES",
     "subFamily": "BULKS ACHETES A LA CARTE",
     "unit": "Tonnes"
@@ -86,8 +86,8 @@ Le body passé à la requête doit avoir le format qui suit :
 
 Chaque objet JSON représentant une vente doit contenir les informations suivantes :
 
-- `id` : identitfiant du produit.
-- `name` : nom du produit.
+- `productRef` : identitfiant du produit.
+- `productName` : nom du produit.
 - `family` : famille de produit.
 - `subFamily` : Sous-famille du produit.
 - `unit` : Unités (litres, tonnes etc...).

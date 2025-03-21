@@ -97,7 +97,7 @@ curl -X POST "https://api-9a4b7c2d6e1f8g3h0i5j2k7l4m9n6o1p2q.veez.myfeedit.com/s
 				"id": "123456789",
 				"codeAdh": "Adh-9876543",
 				"quantity": "666",
-				"productRef": "00/00/15+40cao",
+				"productRef": "00/00/15+40cao"
 			}
 		]
 ```
