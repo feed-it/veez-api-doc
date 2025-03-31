@@ -119,7 +119,7 @@ Chaque objet JSON représentant un portefeuille doit contenir les informations s
 
 - `codeTc` : Code interne du Tc.
 - `tcPV` ou `tcPA` [obligatoire] : Nom du Tc (Production Végétale ou Production Animale).
-- `isMainTcPV` ou `isMainTcPA` [obligatoire] : Tc principal (valeurs `true` ou `false`. False si non fourni).
+- `isMainTcPV` ou `isMainTcPA` [obligatoire] : Tc principal (valeurs `true` ou `false`).
 - `codeAdh` [obligatoire] : code interne de l'exploitation affectée.
 
 #### ✅ Exemple de réponse après insertion réussie
