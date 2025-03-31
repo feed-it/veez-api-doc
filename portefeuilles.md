@@ -69,7 +69,27 @@ Le body passé à la requête doit avoir le format qui suit :
 ```json
 [
   {
-    "tc": "Yvan Dugrain",
+    "codeTc": "YD",
+    "tcPV": "Yvan Dugrain",
+    "isMainTcPV": true,
+    "codeAdh": "999999999"
+  },
+  {
+    "codeTc": "YD",
+    "tcPV": "Yvan Dugrain",
+    "isMainTcPV": true,
+    "codeAdh": "123456789"
+  },
+  {
+    "codeTc": "AG",
+    "tcPV": "André Gilles",
+    "isMainTcPV": false,
+    "codeAdh": "123456789"
+  },
+  {
+    "codeTc": "JLN",
+    "tcPA": "Jocelyn",
+    "isMainTcPA": true,
     "codeAdh": "123456789"
   }
 ]
@@ -97,8 +117,10 @@ Le body passé à la requête doit avoir le format qui suit :
 
 Chaque objet JSON représentant un portefeuille doit contenir les informations suivantes :
 
-- `tc` : Nom du Tc.
-- `codeAdh` : code interne de l'exploitation affectée.
+- `codeTc` : Code interne du Tc.
+- `tcPV` ou `tcPA` [obligatoire] : Nom du Tc (Production Végétale ou Production Animale).
+- `isMainTcPV` ou `isMainTcPA` [obligatoire] : Tc principal (valeurs `true` ou `false`. False si non fourni).
+- `codeAdh` [obligatoire] : code interne de l'exploitation affectée.
 
 #### ✅ Exemple de réponse après insertion réussie
 
@@ -117,7 +139,8 @@ Chaque objet JSON représentant un portefeuille doit contenir les informations s
     
     Chaque objet doit contenir :
     
-- `tc` : Nom du Tc.
+- `tcPV` ou `tcPA` : Nom du Tc.
+- `isMainTcPV` ou `isMainTcPA` : Nom du Tc.
 - `codeAdh` : code interne de l'exploitation affectée.
 </details>
 
@@ -126,7 +149,7 @@ Chaque objet JSON représentant un portefeuille doit contenir les informations s
 <details>
     <summary>❔<u> Qui dois-je contacter en cas de besoin ?</u></summary>
     
-    L'équipe Feed'it se fera un plaisir de répondre a toutes les questions !
+    L'équipe Feed'it se fera un plaisir de répondre a toutes vos questions !
 </details>
 
 ---
