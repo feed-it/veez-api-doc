@@ -56,7 +56,7 @@ Ce microservice utilise l’authentification **Bearer Token** pour sécuriser le
 ### Headers
 
 ```http
-Authorization: Basic <yourTokenHere>
+Authorization: Bearer <yourTokenHere>
 Content-Type: application/json
 ```
 

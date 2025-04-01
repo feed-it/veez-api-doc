@@ -30,7 +30,7 @@ Pour importer des ventes, effectuez un appel **HTTP POST** vers l’endpoint dé
 ### Headers
 
 ```http
-Authorization: Basic <yourTokenHere>
+Authorization: Bearer <yourTokenHere>
 Content-Type: application/json
 ```
 
