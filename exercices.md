@@ -44,12 +44,11 @@ Content-Type: application/json
   2. **Obtention d'un Token JWT** via Keycloak.
 - **Utilisation obligatoire du Bearer Token** pour toutes les requêtes après authentification.
 
-#### 📤 Processus d'import des ventes
+#### 📤 Processus de lecture des données
 
 1. **Appel de l'API d'authentification** pour récupérer un **token JWT**.
-2. **Envoi d'une requête HTTP POST** à l'endpoint dédié en incluant :
-   - Un JSON contenant les détails des ventes.
-3. **Réponse de l'API** indiquant le succès ou l'échec de l'import.
+2. **Envoi d'une requête HTTP GET** à l'endpoint dédié.
+3. **Réponse de l'API** indiquant le succès ou l'échec de la requête.
 
 #### ✅ Exemple de réponse après requête aboutie
 
