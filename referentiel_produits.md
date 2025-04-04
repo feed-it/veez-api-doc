@@ -172,8 +172,8 @@ Chaque objet JSON représentant une vente doit contenir les informations suivant
 | rateRealTonCollectCer            | COLLECTE CÉRÉALES (TONNES)                  |
 | rateRealMbCollectCer             | COLLECTE CÉRÉALES (MARGE BRUTE)             |
 | rateRealHaCollectSeeds           | COLLECTE SEMENCES (HECTARES)                |
-| rateRealCaPal                    | PAL (CHIFFRE D'AFFAIRES)                    |
-| rateRealMbPal                    | PAL (MARGE BRUTE)                           |
+| rateRealCaPal                    | PALISSAGE (CHIFFRE D'AFFAIRES)              |
+| rateRealMbPal                    | PALISSAGE (MARGE BRUTE)                     |
 | rateRealCaEqts                   | ÉQUIPEMENTS (CHIFFRE D'AFFAIRES)            |
 | rateRealMbEqts                   | ÉQUIPEMENTS (MARGE BRUTE)                   |
 | rateRealCaEqtsVeges              | ÉQUIPEMENTS LÉGUMES (CHIFFRE D'AFFAIRES)    |
@@ -192,7 +192,6 @@ Chaque objet JSON représentant une vente doit contenir les informations suivant
 | rateRealMbFeedAdditive           | ADDITIFS ALIMENTAIRES (MARGE BRUTE)         |
 | rateRealMbService                | SERVICES (MARGE BRUTE)                      |
 | rateRealCaService                | SERVICES (CHIFFRE D'AFFAIRES)               |
-| rateRealMbPv                     | PHOTOVOLTAÏQUE (MARGE BRUTE)                |
 | rateRealTonAnimalFeed            | ALIMENTATION ANIMALE (TONNES)               |
 | rateRealMbAnimalFeed             | ALIMENTATION ANIMALE (MARGE BRUTE)          |
 | rateRealTonCompleteAnimalFeed    | ALIMENT COMPLET (TONNES)                    |
