@@ -24,7 +24,7 @@ Ce microservice utilise l’authentification **Bearer Token** pour sécuriser le
 ## Portfolios
 
 <details>
-     <summary> <b>GET</b> => <em><u>https://api-9a4b7c2d6e1f8g3h0i5j2k7l4m9n6o1p2q.veez.myfeedit.com/portfolios</u></em></summary>
+     <summary> <b>GET</b> => <em><u>https://api-9a4b7c2d6e1f8g3h0i5j2k7l4m9n6o1p2q.veez.myfeedit.com/portfolios/:year</u></em></summary>
 
 - Params :
   - `year` ex : `https://api-9a4b..../portfolios/2025`
