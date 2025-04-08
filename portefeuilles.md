@@ -73,28 +73,28 @@ Le body passé à la requête doit avoir le format qui suit :
     "tc": "Yvan Dugrain",
     "isMainTc": true,
     "codeAdh": "999999999",
-    "activity": "Collecte"
+    "activity": "Collect"
   },
   {
     "codeTc": "YD",
     "tc": "Yvan Dugrain",
     "isMainTc": true,
     "codeAdh": "123456789",
-    "activity": "Collecte"
+    "activity": "Collect"
   },
   {
     "codeTc": "AG",
     "tc": "André Gilles",
     "isMainTc": false,
     "codeAdh": "123456789",
-    "activity": "Semences"
+    "activity": "Inputs"
   },
   {
     "codeTc": "JLN",
     "tcPA": "Jocelyn",
     "isMainTcPA": true,
     "codeAdh": "123456789",
-    "activity": "Appro"
+    "activity": "Inputs"
   }
 ]
 ```
@@ -125,7 +125,7 @@ Chaque objet JSON représentant un portefeuille doit contenir les informations s
 - `tc` [obligatoire] : Nom du Tc (Production Végétale ou Production Animale).
 - `isMainTc` ou `isMainTc` [obligatoire] : Tc principal (valeurs `true` ou `false`).
 - `codeAdh` [obligatoire] : code interne de l'exploitation affectée.
-  - `activité` : l'activité conernée.
+- `activité` : l'activité conernée. (suivant la liste => 'Inputs', 'Collect', 'Pa). Tout autre activité sera rejetée.
 
 #### ✅ Exemple de réponse après insertion réussie
 
