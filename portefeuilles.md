@@ -70,27 +70,31 @@ Le body passé à la requête doit avoir le format qui suit :
 [
   {
     "codeTc": "YD",
-    "tcPV": "Yvan Dugrain",
-    "isMainTcPV": true,
-    "codeAdh": "999999999"
+    "tc": "Yvan Dugrain",
+    "isMainTc": true,
+    "codeAdh": "999999999",
+    "activity": "Collecte"
   },
   {
     "codeTc": "YD",
-    "tcPV": "Yvan Dugrain",
-    "isMainTcPV": true,
-    "codeAdh": "123456789"
+    "tc": "Yvan Dugrain",
+    "isMainTc": true,
+    "codeAdh": "123456789",
+    "activity": "Collecte"
   },
   {
     "codeTc": "AG",
-    "tcPV": "André Gilles",
-    "isMainTcPV": false,
-    "codeAdh": "123456789"
+    "tc": "André Gilles",
+    "isMainTc": false,
+    "codeAdh": "123456789",
+    "activity": "Semences"
   },
   {
     "codeTc": "JLN",
     "tcPA": "Jocelyn",
     "isMainTcPA": true,
-    "codeAdh": "123456789"
+    "codeAdh": "123456789",
+    "activity": "Appro"
   }
 ]
 ```
@@ -118,9 +122,10 @@ Le body passé à la requête doit avoir le format qui suit :
 Chaque objet JSON représentant un portefeuille doit contenir les informations suivantes :
 
 - `codeTc` : Code interne du Tc.
-- `tcPV` ou `tcPA` [obligatoire] : Nom du Tc (Production Végétale ou Production Animale).
-- `isMainTcPV` ou `isMainTcPA` [obligatoire] : Tc principal (valeurs `true` ou `false`).
+- `tc` [obligatoire] : Nom du Tc (Production Végétale ou Production Animale).
+- `isMainTc` ou `isMainTc` [obligatoire] : Tc principal (valeurs `true` ou `false`).
 - `codeAdh` [obligatoire] : code interne de l'exploitation affectée.
+  - `activité` : l'activité conernée.
 
 #### ✅ Exemple de réponse après insertion réussie
 
@@ -139,9 +144,10 @@ Chaque objet JSON représentant un portefeuille doit contenir les informations s
     
     Chaque objet doit contenir :
     
-- `tcPV` ou `tcPA` : Nom du Tc.
-- `isMainTcPV` ou `isMainTcPA` : Nom du Tc.
+- `tc` ou `tc` : Nom du Tc.
+- `isMainTc` ou `isMainTc` : Nom du Tc.
 - `codeAdh` : code interne de l'exploitation affectée.
+- `activité` : l'activité conernée.
 </details>
 
 ---
