@@ -91,7 +91,7 @@ Le body passé à la requête doit avoir le format qui suit :
   },
   {
     "codeTc": "JLN",
-    "tcPA": "Jocelyn",
+    "tc": "Jocelyn",
     "isMainTc": true,
     "codeAdh": "123456789",
     "activity": "Inputs"
