@@ -125,7 +125,12 @@ Chaque objet JSON représentant un portefeuille doit contenir les informations s
 - `tc` [obligatoire] : Nom du Tc (Production Végétale ou Production Animale).
 - `isMainTc` [obligatoire] : Tc principal (valeurs `true` ou `false`).
 - `codeAdh` [obligatoire] : code interne de l'exploitation affectée.
-- `activité` : l'activité conernée. (suivant la liste => 'Inputs', 'Collect', 'Pa). Tout autre activité sera rejetée.
+- `activité` : l'activité conernée =>
+  - `Inputs`, _(APPRO)_
+  - `Collect`, _(COLLECTE)_
+  - `Pa`, _(PRODUCTION ANIMALE)_.
+
+> ⚠ - Tout autre activité sera rejetée.
 
 #### ✅ Exemple de réponse après insertion réussie
 
