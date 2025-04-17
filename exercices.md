@@ -20,7 +20,7 @@ Ce microservice utilise l’authentification **Bearer Token** pour sécuriser le
 
 # <a id="appel-route"></a> Appel de la route 🛣️
 
-Pour retoruver l'exercice en cours, effectuez un appel **HTTP GET** vers l’endpoint dédié en fournissant les données nécessaires.
+Pour retoruver tous les exercices, effectuez un appel **HTTP GET** vers l’endpoint dédié en fournissant les données nécessaires.
 
 ### url :
 
@@ -32,6 +32,12 @@ Pour retoruver l'exercice en cours, effectuez un appel **HTTP GET** vers l’end
 Authorization: Bearer <yourTokenHere>
 Content-Type: application/json
 ```
+
+### queries
+
+- `?year=2025` => renvoie l'année 2025.
+- `?year=active` => renvoie l'année de l'ecercice en cours seulement.
+- pas de queries => renvoie tous les exercices du client.
 
 ---
 
