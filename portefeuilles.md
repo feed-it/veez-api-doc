@@ -46,6 +46,7 @@ Ce microservice utilise l’authentification **Bearer Token** pour sécuriser le
   - `?mode=insert-only` (only insert new datas).
   - `?mode=flush-tc` (delete already present datas from tc's portfolios before new data insertion).
   - `?mode=flush-all` (delete all datas (for a given year) before new data insertion).
+  - `?mode=upsert` (modify tc prop if data already exists, add new data if it doesn't).
 
 > 💡 Insert a portfolio.
 
