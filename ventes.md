@@ -19,7 +19,7 @@ Ce microservice utilise l’authentification **Bearer Token** pour sécuriser le
 
 ---
 
-# <a id="appel-route"></a> Appel de la route 🛣️
+# `<a id="appel-route"></a>` Appel de la route 🛣️
 
 Pour importer des ventes, effectuez un appel **HTTP POST** vers l’endpoint dédié en fournissant les données nécessaires.
 
@@ -36,7 +36,7 @@ Content-Type: application/json
 
 ---
 
-# <a id="body"></a> Body 📖
+# `<a id="body"></a>` Body 📖
 
 Le body passé à la requête doit avoir le format qui suit :
 
@@ -46,12 +46,14 @@ Le body passé à la requête doit avoir le format qui suit :
     "id": "123456789",
     "codeAdh": "Adh-9876543",
     "quantity": "666",
+    "amount": "111",
     "productRef": "00/00/15+40cao"
   },
   {
     "id": "98775654",
     "codeAdh": "Adh-44455",
     "quantity": "774",
+    "amount": "222",
     "productRef": "00/10/25+30cad"
   }
 ]
@@ -59,7 +61,7 @@ Le body passé à la requête doit avoir le format qui suit :
 
 ---
 
-# ✅ <a id="resume"></a> Résumé
+# ✅ `<a id="resume"></a>` Résumé
 
 #### 🔐 Sécurité et authentification
 
@@ -82,6 +84,7 @@ Chaque objet JSON représentant une vente doit contenir les informations suivant
 - `id` : id de la vente.
 - `codeAdh` : code adhérent du client.
 - `quantity` : Quantité vendue.
+- `amount` : Montant total.
 - `productRef` : Nom du produit concerné.
 
 #### 🔄 Gestion des mises à jour
@@ -102,54 +105,61 @@ Chaque objet JSON représentant une vente doit contenir les informations suivant
 
 ---
 
-# <a id="faq"></a> FAQ ⁉️
+# `<a id="faq"></a>` FAQ ⁉️
 
 <details>
 	<summary>❔ <u>Quels props doit contenir mon objet afin d'être valide ?</u></summary>
-	
-	Chaque objet doit contenir :
-	
+
+    Chaque objet doit contenir :
+
 - `id` : id de la vente.
 - `codeAdh` : code adhérent du client.
 - `quantity` : Quantité vendue.
+- `amount` : Montant total.
 - `productRef` : Nom du produit concerné.
+
 </details>
 
 ---
 
 <details>
 	<summary> ❔ <u>Comment ajouter une nouvelle vente ?</u></summary>
-	
-	En donnant à l'objet un ID unique encore jamais inséré au préalable.
+
+    En donnant à l'objet un ID unique encore jamais inséré au préalable.
+
 </details>
 
 ---
 
 <details>
 	 <summary>❔ <u>Comment additionner une vente à une existante ?</u></summary>
-	
-	En donnant à l'objet un ID déjà inséré au préalable.
+
+    En donnant à l'objet un ID déjà inséré au préalable.
+
 </details>
 
 ---
 
 <details>
 	<summary>❔<u> Qui dois-je contacter en cas de besoin ?</u></summary>
-	
-	L'équipe Feed'it se fera un plaisir de répondre a toutes les questions !
+
+    L'équipe Feed'it se fera un plaisir de répondre a toutes les questions !
+
 </details>
 
 ---
 
 <details>
 <summary>❔ <u>Comment savoir si ça a fonctionné ?</u></summary>
-	
-	Une réponse sera fournie une fois l'insertion terminée.
+
+    Une réponse sera fournie une fois l'insertion terminée.
+
 <pre>
 {
 	"message": "Successfully inserted 7 sales in 2025 for FEEDIT"
 }
 </pre>
+
 </details>
 
 ---
